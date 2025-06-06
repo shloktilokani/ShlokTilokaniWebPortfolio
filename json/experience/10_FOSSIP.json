@@ -1,0 +1,6 @@
+{
+  "Role": "IOT Developer(Team Leader)",
+  "Company": "FOSSIP, MSU Baroda",
+  "Duration": "May 2023 - Jul 2023",
+  "Description": "Developed an Arduino-based full-duplex model with WS2812b LEDs to illustrate packet transmission and demonstrate network protocols like Stop & Wait, Go-Back-N, and Selective Repeat."
+}

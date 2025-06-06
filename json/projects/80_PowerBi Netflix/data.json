@@ -1,0 +1,6 @@
+{
+    "title": "Data Analysis of Netflix Movies and Series",
+    "category": "PowerBI",
+    "description": "An interactive Power BI dashboard to analyze Netflix Movies and Series data, highlighting genres, cast, directors, release years, ratings, and country availability. The dashboard uses location-based visualizations for a clear, user-friendly display, allowing easy exploration of Netflix's global content trends and offerings.",
+    "github_link": "https://github.com/shloktilokani/PowerBI---Project-2---Netflix-Titles-Analysis.git"
+}

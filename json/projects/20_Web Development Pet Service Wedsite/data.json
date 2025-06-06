@@ -1,0 +1,6 @@
+{
+    "title": "Furry-Aavjo Animal Health Service Website",
+    "category": "Web Development",
+    "description": "The website is developed with HTML, CSS, and JavaScript on the frontend, Flask on the backend, and SQL for database management. Designed for animal health services, it allows clinics to manage pet care appointments, with features for patients to book appointments and an admin panel for approving or rejecting requests.",
+    "github_link": "https://github.com/shloktilokani/Website-Animal-Services.git"
+}

@@ -1,0 +1,288 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- added Style shhet -->
+    <link
+      rel="stylesheet"
+      href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="img/favicon.png" />
+    <title>Shlok Tilokani Portfolio</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <header class="NavContainer" id="NavBar">
+      <nav class="NavBar">
+        <div class="LogoContainer">
+          <a href="#HeroContainer" code style="text-decoration: none"
+            ><p>Shlok <span>Tilokani</span></p></a
+          >
+        </div>
+        <div class="HamburgerIcon" id="HamburgerIcon" onclick="toggleMenu()">
+          <img src="../img/hamburger.png" />
+        </div>
+        <div class="LinkContainer" id="LinkContainer">
+          <a href="#AboutMeContainer">About</a>
+          <a href="#ProjectContainer">Projects</a>
+          <a href="#ExperienceContainer">Experience</a>
+          <a href="#CertificateContainer">Certificates</a>
+          <a href="#ContactContainer">Contact Me</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="HeroSectionContainer" id="HeroContainer">
+      <div class="HeroSectionGrid">
+        <div class="HeroText">
+          <div class="HeroTitleText">
+            <h2>Hi, My name is</h2>
+          </div>
+          <div class="HeroHeader">
+            <h1>Shlok Tilokani</h1>
+          </div>
+          <div class="SocialContainer">
+            <a href="https://github.com/shloktilokani"
+              ><i><img src="../img/github.png" alt="github" /></i
+            ></a>
+            <a href="https://www.linkedin.com/in/shlok-tilokani-82819225a/"
+              ><i><img src="../img/linkedin.png" alt="linkedin" /></i
+            ></a>
+            <a href="https://www.hackerrank.com/profile/tilokanishlok"
+              ><i><img src="../img/hackerrank.png" alt="hackerrank" /></i
+            ></a>
+          </div>
+          <div class="HeroButton">
+            <a href="#ProjectContainer"><button>View My Projects</button></a>
+          </div>
+        </div>
+        <div class="HeroImage">
+          <img
+            src="img/hero.png"
+            alt="HeroImage"
+            height="500"
+            width="500" />
+        </div>
+      </div>
+    </div>
+
+    <!-- About Me Section -->
+    <div id="AboutMeContainer" class="AboutMeContainer">
+      <div class="AboutMeHeading">
+        <p>About Me</p>
+      </div>
+      <div class="AboutMeGridContainer">
+        <div class="AboutMeImageContainer">
+          <img src="../img/aboutme.jpg" alt="about image" />
+        </div>
+        <div class="AboutMeContentContainer">
+          <div class="AboutSubText">
+            <p>
+              I am passionate about technology with a strong foundation in
+              Python, Backend Development, SQL, Data Analysis, Excel, and Power
+              BI. I thrive in collaborative environments where new ideas can
+              emerge through teamwork. My professional interests revolve around
+              Data Science and Web Development, and I’m always eager to
+              diversify my skill set. Logical, analytical, and curious by
+              nature, I approach challenges with a methodical mindset. When it
+              comes to my personal interests, I’m a fan of sci-fi and superhero
+              genres, with shows like Westworld, Mr. Robot, and movies like Iron
+              Man and Deadpool topping my list. Ultimately, my goal is to make
+              an impact through innovation and creativity in everything I do.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="ProjectContainer" class="ProjectContainer">
+      <div class="ProjectHeading">
+        <p>My Projects</p>
+      </div>
+      <div class="ProjectSubText">
+        <p>Explore some of my best projects so far.</p>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="FilterContainer">
+        <button class="filter-btn" data-category="all">All</button>
+        
+        <button class="filter-btn" data-category="">
+          
+        </button>
+        
+      </div>
+
+      <div class="ProjectGridContainer">
+        
+        <div class="ProjectCard" data-category="">
+          <div class="ProjectCardInner">
+            <div class="ProjectCardFront">
+              <img
+                src=""
+                alt="Project Image"
+                class="projectImage" />
+              <div class="category"></div>
+            </div>
+            <div class="ProjectCardBack">
+              <p class="title"></p>
+              <!-- Use class instead of id -->
+              <p class="description"></p>
+              <hr />
+              <a href="" class="github-link">
+                <img src="../img/github.png" alt="GitHub" />
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Experience Section -->
+    <div class="ExperienceContainer" id="ExperienceContainer">
+      <div class="ExperienceHeading">
+        <p>Experience</p>
+      </div>
+      <div class="ExperienceSubText">
+        <p>Here's a glimpse into my professional journey so far.</p>
+      </div>
+      <div class="ExperienceTimeline">
+        
+        <div class="ExperienceCard">
+          <div class="ExperienceContent">
+            <div class="ExperienceRole">
+              <p></p>
+            </div>
+            <div class="ExperienceCompany">
+              <p></p>
+            </div>
+            <div class="ExperienceDuration">
+              <p></p>
+            </div>
+            <div class="ExperienceDescription">
+              <p></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Certificate Section -->
+    <div id="CertificateContainer" class="CertificateContainer">
+      <div class="CertificateHeading">
+        <p>My Achievements</p>
+      </div>
+      <div class="CertificacteSubText">
+        <p>Here are some of achievements I achieved so far.</p>
+      </div>
+
+      <div class="CertificateGridContainer">
+        
+        <div class="CertificateCard" data-category="add about certificates">
+          <div class="CertificateCardInner">
+            <div class="CertificateCardFront">
+              <img
+                src=""
+                alt="Certificate Image"
+                class="CertificateImage" />
+            </div>
+            <div class="CertificateCardBack">
+              <p class="title"></p>
+              <p class="description"></p>
+              <hr />
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- Contact Me Section -->
+    <div class="ContactSection" id="ContactContainer">
+      <div class="ContactContent">
+        <h2>Get in Touch</h2>
+        <p>
+          I’d love to hear from you! Feel free to reach out for collaborations
+          or inquiries.
+        </p>
+      </div>
+      <div class="ContactFormContainer">
+        <form
+          class="ContactForm"
+          action="https://formspree.io/f/mldenydz"
+          method="POST">
+          <div class="FormRow">
+            <label>
+              Your Name:
+              <input type="text" name="name" id="nameInput" />
+            </label>
+            <label>
+              Your email:
+              <input type="email" name="email" />
+            </label>
+          </div>
+          <input
+            name="subject"
+            type="hidden"
+            id="subjectInput"
+            value="New submission from " />
+          <div class="FormRow">
+            <label>
+              Your message:
+              <textarea
+                name="message"
+                placeholder="Write your message here..."
+                rows="6"
+                required></textarea>
+            </label>
+          </div>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="Footer">
+      <div class="FooterContent">
+        <div class="FooterLogo">
+          <p>Shlok <span>Tilokani</span></p>
+        </div>
+        <div class="FooterLinks">
+          <a href="#NavBar">Home</a>
+          <a href="#AboutMeContainer">About</a>
+          <a href="#ProjectContainer">Projects</a>
+          <a href="#ExperienceContainer">Experience</a>
+          <a href="#CertificateContainer">Certificates</a>
+          <a href="#ContactContainer">Contact Me</a>
+        </div>
+        <div class="FooterSocials">
+          <a href="https://github.com/shloktilokani"
+            ><i><img src="../img/github.png" alt="github" /></i
+          ></a>
+          <a href="https://www.linkedin.com/in/shlok-tilokani-82819225a/"
+            ><i><img src="../img/linkedin.png" alt="linkedin" /></i
+          ></a>
+          <a href="https://www.hackerrank.com/profile/tilokanishlok"
+            ><i><img src="../img/hackerrank.png" alt="hackerrank" /></i
+          ></a>
+        </div>
+      </div>
+      <div class="FooterCopyright">
+        <p>&copy; 2024 Shlok Tilokani. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Added Script Sheet -->
+    <script src="js/script.js"></script>
+  </body>
+</html>

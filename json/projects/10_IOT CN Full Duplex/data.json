@@ -1,0 +1,6 @@
+{
+    "title": "Computer Networks - IoT Model for Full Duplex Packet Transmission",
+    "category": "IOT",
+    "description": "The IoT application uses WS2812b LEDs to visually demonstrate packet transmission in a full-duplex network, covering protocols like Stop & Wait, Go-Back-N, and Selective Repeat. This setup serves as an educational tool to help illustrate network operations and packet flow.",
+    "github_link": "https://github.com/shloktilokani/CN-Project-Full-Duplex-Packet-Transmission.git"
+}

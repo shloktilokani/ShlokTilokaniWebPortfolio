@@ -1,0 +1,6 @@
+{
+    "title": "Computer Networks - IoT Model for Half Duplex Packet Transmission",
+    "category": "IOT",
+    "description": "The project introduces an IoT application that leverages WS2812b individually addressable LEDs to create a hands-on demonstration of packet transmission in a half-duplex network using the stop-and-wait protocol. This engaging application acts as an educational tool, visually guiding individuals through the fundamentals of computer networks by illustrating how packets move within a half-duplex setup.",
+    "github_link": "https://github.com/shloktilokani/CN-Project-Half-Duplex-Packet-Transmission---Stop-Wait-Protocol.git"
+}

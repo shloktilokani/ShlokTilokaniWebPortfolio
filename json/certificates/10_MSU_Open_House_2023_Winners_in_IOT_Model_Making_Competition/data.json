@@ -1,0 +1,4 @@
+{
+  "title": "MSU Open House 2023 IOT Model Making Competition",
+  "description": "Awarded 1st place for developing a Half Duplex Model using Arduino, the project showcased an IoT application with WS2812b LEDs. It vividly demonstrated packet transmission in a half-duplex network using the stop-and-wait protocol, serving as an insightful educational tool for understanding data packet traversal and network concepts."
+}
