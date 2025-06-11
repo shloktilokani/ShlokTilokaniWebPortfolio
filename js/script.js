@@ -44,7 +44,7 @@ async function loadProjects() {
       if (!json) continue;
 
       let image = "";
-      for (const ext of ["png", "jpg", "jpeg", "gif"]) {
+      for (const ext of ["webp"]) {
         const imgPath = `${basePath}${folder}image.${ext}`;
         try {
           const imgTest = await fetch(imgPath);
@@ -71,7 +71,7 @@ async function loadProjects() {
             <p class="description">${json.description}</p>
             <hr />
             <a href="${json.github_link}" class="github-link">
-              <img src="img/github.png" alt="GitHub" />
+              <img src="img/github.webp" alt="GitHub" />
             </a>
           </div>
         </div>`;
@@ -148,7 +148,7 @@ async function loadCertificates() {
       if (!json) continue;
 
       let image = "";
-      for (const ext of ["jpg", "png", "jpeg", "gif"]) {
+      for (const ext of ["webp"]) {
         const imgPath = `${basePath}${folder}image.${ext}`;
         try {
           const imgTest = await fetch(imgPath);
