@@ -44,7 +44,7 @@ async function loadProjects() {
       if (!json) continue;
 
       let image = "";
-      for (const ext of ["jpg", "png", "jpeg", "gif"]) {
+      for (const ext of ["png", "jpg", "jpeg", "gif"]) {
         const imgPath = `${basePath}${folder}image.${ext}`;
         try {
           const imgTest = await fetch(imgPath);
