@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", async () => {
   setupHamburgerMenu();
   await loadExperience();
@@ -35,7 +34,9 @@ async function loadProjects() {
   try {
     const res = await fetch(basePath);
     const text = await res.text();
-    const folders = [...text.matchAll(/href="([^"]+\/)"/g)].map(m => m[1]);
+    const folders = [...text.matchAll(/href="([^"]+\/)"/g)]
+      .map(m => m[1])
+      .filter(f => f !== "../");
 
     const categoriesSet = new Set();
 
@@ -44,16 +45,11 @@ async function loadProjects() {
       if (!json) continue;
 
       let image = "";
-      for (const ext of ["webp"]) {
-        const imgPath = `${basePath}${folder}image.${ext}`;
-        try {
-          const imgTest = await fetch(imgPath);
-          if (imgTest.ok) {
-            image = imgPath;
-            break;
-          }
-        } catch {}
-      }
+      const imgPath = `${basePath}${folder}image.webp`;
+      try {
+        const imgRes = await fetch(imgPath);
+        if (imgRes.ok) image = imgPath;
+      } catch {}
 
       categoriesSet.add(json.category);
 
@@ -141,23 +137,20 @@ async function loadCertificates() {
   try {
     const res = await fetch(basePath);
     const text = await res.text();
-    const folders = [...text.matchAll(/href="([^"]+\/)"/g)].map(m => m[1]);
+    const folders = [...text.matchAll(/href="([^"]+\/)"/g)]
+      .map(m => m[1])
+      .filter(f => f !== "../");
 
     for (const folder of folders) {
       const json = await fetchJSON(`${basePath}${folder}data.json`);
       if (!json) continue;
 
       let image = "";
-      for (const ext of ["webp"]) {
-        const imgPath = `${basePath}${folder}image.${ext}`;
-        try {
-          const imgTest = await fetch(imgPath);
-          if (imgTest.ok) {
-            image = imgPath;
-            break;
-          }
-        } catch {}
-      }
+      const imgPath = `${basePath}${folder}image.webp`;
+      try {
+        const imgRes = await fetch(imgPath);
+        if (imgRes.ok) image = imgPath;
+      } catch {}
 
       const card = document.createElement("div");
       card.className = "CertificateCard";
