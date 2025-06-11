@@ -45,9 +45,7 @@ async function loadProjects() {
 
       let image = "";
       for (const ext of ["jpg", "png", "jpeg", "gif"]) {
-        const encodedFolder = encodeURIComponent(folder); // add this line
-        const imgPath = `${basePath}${encodedFolder}image.${ext}`;
-
+        const imgPath = `${basePath}${folder}image.${ext}`;
         try {
           const imgTest = await fetch(imgPath);
           if (imgTest.ok) {
