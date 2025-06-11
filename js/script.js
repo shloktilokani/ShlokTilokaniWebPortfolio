@@ -35,17 +35,17 @@ async function loadProjects() {
     const res = await fetch(basePath);
     const text = await res.text();
     const folders = [...text.matchAll(/href="([^"]+\/)"/g)]
-      .map(m => m[1])
-      .filter(f => f !== "../");
+      .map(m => m[1].replace(/^\/+|\/+$/g, ""))
+      .filter(f => f !== "..");
 
     const categoriesSet = new Set();
 
     for (const folder of folders) {
-      const json = await fetchJSON(`${basePath}${folder}data.json`);
+      const json = await fetchJSON(`${basePath}${folder}/data.json`);
       if (!json) continue;
 
       let image = "";
-      const imgPath = `${basePath}${folder}image.webp`;
+      const imgPath = `${basePath}${folder}/image.webp`;
       try {
         const imgRes = await fetch(imgPath);
         if (imgRes.ok) image = imgPath;
@@ -74,7 +74,7 @@ async function loadProjects() {
       projectGrid.appendChild(card);
     }
 
-    // Render filter buttons
+    // Filter Buttons
     filterContainer.innerHTML = `<button class="filter-btn active" data-category="all">All</button>`;
     [...categoriesSet].sort().forEach(cat => {
       const btn = document.createElement("button");
@@ -84,7 +84,7 @@ async function loadProjects() {
       filterContainer.appendChild(btn);
     });
 
-    // Filter logic
+    // Filter Logic
     document.querySelectorAll(".filter-btn").forEach(button => {
       button.addEventListener("click", () => {
         document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
@@ -108,7 +108,9 @@ async function loadExperience() {
   try {
     const res = await fetch(basePath);
     const text = await res.text();
-    const files = [...text.matchAll(/href="([^"]+\.json)"/g)].map(m => m[1]).reverse();
+    const files = [...text.matchAll(/href="([^"]+\.json)"/g)]
+      .map(m => m[1])
+      .reverse();
 
     for (const file of files) {
       const json = await fetchJSON(`${basePath}${file}`);
@@ -138,15 +140,15 @@ async function loadCertificates() {
     const res = await fetch(basePath);
     const text = await res.text();
     const folders = [...text.matchAll(/href="([^"]+\/)"/g)]
-      .map(m => m[1])
-      .filter(f => f !== "../");
+      .map(m => m[1].replace(/^\/+|\/+$/g, ""))
+      .filter(f => f !== "..");
 
     for (const folder of folders) {
-      const json = await fetchJSON(`${basePath}${folder}data.json`);
+      const json = await fetchJSON(`${basePath}${folder}/data.json`);
       if (!json) continue;
 
       let image = "";
-      const imgPath = `${basePath}${folder}image.webp`;
+      const imgPath = `${basePath}${folder}/image.webp`;
       try {
         const imgRes = await fetch(imgPath);
         if (imgRes.ok) image = imgPath;
