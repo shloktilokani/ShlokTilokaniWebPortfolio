@@ -46,11 +46,5 @@ A modern, lightweight, and fully responsive personal portfolio website built usi
 
 👉 Visit: [shloktilokani.com](https://shloktilokani.com)
 
-## 🙏 Acknowledgments
-
-- 🙌 Special thanks to **Mahimna** for frontend contributions  
-- 💐 Grateful to **Vandana (aunt)** for continuous encouragement and support
-
----
 
 > *Crafted with patience, passion, and perseverance.*
