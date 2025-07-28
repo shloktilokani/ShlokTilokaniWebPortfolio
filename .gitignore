@@ -1,3 +1,5 @@
+# Ignore these files
+
 .tmp.drivedownload/
 .tmp.driveupload/
 appmap.log
